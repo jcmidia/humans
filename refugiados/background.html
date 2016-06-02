@@ -1,0 +1,11 @@
+<script>
+	chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
+	    chrome.tabs.executeScript(tab.id, {file: "bookmarklet.js"});
+	});
+	chrome.tabs.onCreated.addListener(function(tabId, changeInfo, tab) {         
+		chrome.tabs.executeScript(tab.id, {file: "bookmarklet.js"});
+	});
+    chrome.browserAction.onClicked.addListener(function(tab) {
+        chrome.tabs.executeScript(tab.id, {file: "bookmarklet.js"});
+    });
+</script>
