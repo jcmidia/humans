@@ -27,6 +27,12 @@
 					if(child.nodeValue.match(/(réfugié)/i)){
 						child.nodeValue = child.nodeValue.replace(/(réfugié)/i, "Être Humain");
 					}
+					if(child.nodeValue.match(/(vluchteling)/i)){
+						child.nodeValue = child.nodeValue.replace(/(vluchteling)/i, "Mens");
+					}
+					if(child.nodeValue.match(/(vluchtelingen)/i)){
+						child.nodeValue = child.nodeValue.replace(/(vluchtelingen)/i, "Mensen");
+					}
 				}
 				if(child.childNodes.length > 0 && child.tagName !== "SCRIPT" && child.tagName !== "STYLE"){
 					fixElement(child);
